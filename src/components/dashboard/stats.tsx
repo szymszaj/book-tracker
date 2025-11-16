@@ -1,44 +1,44 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { BookOpen, BookMarked, Clock, TrendingUp } from 'lucide-react'
+import { motion } from "framer-motion";
+import { BookOpen, BookMarked, Clock, TrendingUp } from "lucide-react";
 
 const stats = [
   {
     icon: BookOpen,
-    label: 'Books Read',
-    value: '24',
-    change: '+12%',
-    color: 'from-blue-500 to-blue-600',
+    label: "Books Read",
+    value: "24",
+    change: "+12%",
+    color: "from-blue-500 to-blue-600",
   },
   {
     icon: BookMarked,
-    label: 'Pages Read',
-    value: '6,432',
-    change: '+23%',
-    color: 'from-purple-500 to-purple-600',
+    label: "Pages Read",
+    value: "6,432",
+    change: "+23%",
+    color: "from-purple-500 to-purple-600",
   },
   {
     icon: Clock,
-    label: 'Reading Time',
-    value: '142h',
-    change: '+8%',
-    color: 'from-pink-500 to-pink-600',
+    label: "Reading Time",
+    value: "142h",
+    change: "+8%",
+    color: "from-pink-500 to-pink-600",
   },
   {
     icon: TrendingUp,
-    label: 'Current Streak',
-    value: '12 days',
-    change: 'Active',
-    color: 'from-green-500 to-green-600',
+    label: "Current Streak",
+    value: "12 days",
+    change: "Active",
+    color: "from-green-500 to-green-600",
   },
-]
+];
 
 export default function DashboardStats() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {stats.map((stat, index) => {
-        const Icon = stat.icon
+        const Icon = stat.icon;
         return (
           <motion.div
             key={index}
@@ -66,8 +66,8 @@ export default function DashboardStats() {
               </p>
             </div>
           </motion.div>
-        )
+        );
       })}
     </div>
-  )
+  );
 }

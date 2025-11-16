@@ -1,20 +1,18 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { ArrowRight, BookOpen } from 'lucide-react'
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, BookOpen } from "lucide-react";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 dark:from-blue-900/30 dark:via-purple-900/30 dark:to-pink-900/30 backdrop-blur-3xl" />
         <div className="absolute inset-0 bg-grid-pattern opacity-10" />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
         <div className="text-center">
           <motion.div
@@ -52,7 +50,11 @@ export default function Hero() {
                 </Button>
               </Link>
               <Link href="#features">
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg px-8 py-6"
+                >
                   Learn More
                 </Button>
               </Link>
@@ -66,10 +68,10 @@ export default function Hero() {
             className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
           >
             {[
-              { label: 'Active Users', value: '10K+' },
-              { label: 'Books Tracked', value: '500K+' },
-              { label: 'Pages Read', value: '50M+' },
-              { label: 'Countries', value: '150+' },
+              { label: "Active Users", value: "10K+" },
+              { label: "Books Tracked", value: "500K+" },
+              { label: "Pages Read", value: "50M+" },
+              { label: "Countries", value: "150+" },
             ].map((stat, index) => (
               <div
                 key={index}
@@ -87,8 +89,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Decorative Elements */}
       <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white dark:from-black to-transparent" />
     </section>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-import Navbar from '@/components/navbar'
-import Hero from '@/components/hero'
-import Features from '@/components/features'
-import ImageSlider from '@/components/image-slider'
-import StatsSection from '@/components/stats-section'
+import Navbar from "@/components/navbar";
+import Hero from "@/components/hero";
+import Features from "@/components/features";
+import ImageSlider from "@/components/image-slider";
+import StatsSection from "@/components/stats-section";
 
 export default function Home() {
   return (
@@ -12,8 +12,7 @@ export default function Home() {
       <Features />
       <ImageSlider />
       <StatsSection />
-      
-      {/* Testimonials Section */}
+
       <section className="py-24 bg-white dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -21,26 +20,30 @@ export default function Home() {
               What Our Readers Say
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Join thousands of readers who have transformed their reading habits
+              Join thousands of readers who have transformed their reading
+              habits
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: 'Sarah Johnson',
-                role: 'Avid Reader',
-                content: 'BookTracker has completely changed how I approach reading. The statistics and insights keep me motivated!',
+                name: "Sarah Johnson",
+                role: "Avid Reader",
+                content:
+                  "BookTracker has completely changed how I approach reading. The statistics and insights keep me motivated!",
               },
               {
-                name: 'Michael Chen',
-                role: 'Book Blogger',
-                content: 'Finally, a tracking app that understands readers. The interface is beautiful and the features are exactly what I needed.',
+                name: "Michael Chen",
+                role: "Book Blogger",
+                content:
+                  "Finally, a tracking app that understands readers. The interface is beautiful and the features are exactly what I needed.",
               },
               {
-                name: 'Emily Rodriguez',
-                role: 'Student',
-                content: 'I love seeing my reading progress visualized. It makes reading feel like an achievement!',
+                name: "Emily Rodriguez",
+                role: "Student",
+                content:
+                  "I love seeing my reading progress visualized. It makes reading feel like an achievement!",
               },
             ].map((testimonial, index) => (
               <div
@@ -77,7 +80,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -95,12 +97,18 @@ export default function Home() {
               </h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#features" className="text-gray-600 dark:text-gray-400 hover:text-primary">
+                  <a
+                    href="#features"
+                    className="text-gray-600 dark:text-gray-400 hover:text-primary"
+                  >
                     Features
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary">
+                  <a
+                    href="#"
+                    className="text-gray-600 dark:text-gray-400 hover:text-primary"
+                  >
                     Pricing
                   </a>
                 </li>
@@ -112,12 +120,18 @@ export default function Home() {
               </h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary">
+                  <a
+                    href="#"
+                    className="text-gray-600 dark:text-gray-400 hover:text-primary"
+                  >
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary">
+                  <a
+                    href="#"
+                    className="text-gray-600 dark:text-gray-400 hover:text-primary"
+                  >
                     Contact
                   </a>
                 </li>
@@ -129,12 +143,18 @@ export default function Home() {
               </h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary">
+                  <a
+                    href="#"
+                    className="text-gray-600 dark:text-gray-400 hover:text-primary"
+                  >
                     Privacy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-600 dark:text-gray-400 hover:text-primary">
+                  <a
+                    href="#"
+                    className="text-gray-600 dark:text-gray-400 hover:text-primary"
+                  >
                     Terms
                   </a>
                 </li>
@@ -149,5 +169,5 @@ export default function Home() {
         </div>
       </footer>
     </div>
-  )
+  );
 }

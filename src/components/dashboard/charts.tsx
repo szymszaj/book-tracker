@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   AreaChart,
@@ -13,37 +13,34 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-} from 'recharts'
+} from "recharts";
 
-// Sample data for reading progress
 const readingProgressData = [
-  { month: 'Jan', pages: 450 },
-  { month: 'Feb', pages: 620 },
-  { month: 'Mar', pages: 580 },
-  { month: 'Apr', pages: 720 },
-  { month: 'May', pages: 650 },
-  { month: 'Jun', pages: 890 },
-]
+  { month: "Jan", pages: 450 },
+  { month: "Feb", pages: 620 },
+  { month: "Mar", pages: 580 },
+  { month: "Apr", pages: 720 },
+  { month: "May", pages: 650 },
+  { month: "Jun", pages: 890 },
+];
 
-// Sample data for books by category
 const categoryData = [
-  { name: 'Fiction', value: 12, color: '#3b82f6' },
-  { name: 'Non-Fiction', value: 8, color: '#8b5cf6' },
-  { name: 'Science', value: 5, color: '#ec4899' },
-  { name: 'History', value: 4, color: '#10b981' },
-  { name: 'Biography', value: 3, color: '#f59e0b' },
-]
+  { name: "Fiction", value: 12, color: "#3b82f6" },
+  { name: "Non-Fiction", value: 8, color: "#8b5cf6" },
+  { name: "Science", value: 5, color: "#ec4899" },
+  { name: "History", value: 4, color: "#10b981" },
+  { name: "Biography", value: 3, color: "#f59e0b" },
+];
 
-// Sample data for reading activity
 const activityData = [
-  { day: 'Mon', books: 2 },
-  { day: 'Tue', books: 3 },
-  { day: 'Wed', books: 1 },
-  { day: 'Thu', books: 4 },
-  { day: 'Fri', books: 2 },
-  { day: 'Sat', books: 5 },
-  { day: 'Sun', books: 3 },
-]
+  { day: "Mon", books: 2 },
+  { day: "Tue", books: 3 },
+  { day: "Wed", books: 1 },
+  { day: "Thu", books: 4 },
+  { day: "Fri", books: 2 },
+  { day: "Sat", books: 5 },
+  { day: "Sun", books: 3 },
+];
 
 export default function ReadingCharts() {
   return (
@@ -61,15 +58,19 @@ export default function ReadingCharts() {
                 <stop offset="95%" stopColor="#8b5cf6" stopOpacity={0} />
               </linearGradient>
             </defs>
-            <CartesianGrid strokeDasharray="3 3" stroke="#374151" opacity={0.1} />
+            <CartesianGrid
+              strokeDasharray="3 3"
+              stroke="#374151"
+              opacity={0.1}
+            />
             <XAxis dataKey="month" stroke="#6b7280" />
             <YAxis stroke="#6b7280" />
             <Tooltip
               contentStyle={{
-                backgroundColor: '#1f2937',
-                border: 'none',
-                borderRadius: '8px',
-                color: '#fff',
+                backgroundColor: "#1f2937",
+                border: "none",
+                borderRadius: "8px",
+                color: "#fff",
               }}
             />
             <Area
@@ -109,10 +110,10 @@ export default function ReadingCharts() {
               </Pie>
               <Tooltip
                 contentStyle={{
-                  backgroundColor: '#1f2937',
-                  border: 'none',
-                  borderRadius: '8px',
-                  color: '#fff',
+                  backgroundColor: "#1f2937",
+                  border: "none",
+                  borderRadius: "8px",
+                  color: "#fff",
                 }}
               />
             </PieChart>
@@ -126,15 +127,19 @@ export default function ReadingCharts() {
           </h3>
           <ResponsiveContainer width="100%" height={300}>
             <BarChart data={activityData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#374151" opacity={0.1} />
+              <CartesianGrid
+                strokeDasharray="3 3"
+                stroke="#374151"
+                opacity={0.1}
+              />
               <XAxis dataKey="day" stroke="#6b7280" />
               <YAxis stroke="#6b7280" />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: '#1f2937',
-                  border: 'none',
-                  borderRadius: '8px',
-                  color: '#fff',
+                  backgroundColor: "#1f2937",
+                  border: "none",
+                  borderRadius: "8px",
+                  color: "#fff",
                 }}
               />
               <Bar dataKey="books" fill="#3b82f6" radius={[8, 8, 0, 0]} />
@@ -156,7 +161,7 @@ export default function ReadingCharts() {
         <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-full h-4 overflow-hidden">
           <div
             className="bg-gradient-to-r from-blue-500 to-purple-600 h-full rounded-full transition-all duration-500"
-            style={{ width: '72%' }}
+            style={{ width: "72%" }}
           />
         </div>
         <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
@@ -164,5 +169,5 @@ export default function ReadingCharts() {
         </p>
       </div>
     </div>
-  )
+  );
 }
